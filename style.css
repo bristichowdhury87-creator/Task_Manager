@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:antiquewhite;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-shadow: 1px 1px 2px gray;
+}
+h1{
+    text-shadow: 1px 1px 2px gray;
+    padding: 10px 10px;
+    text-align: center;
+}
+h2{
+    text-shadow: 1px 1px 2px gray;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+#Home{
+    font-size:x-large;
+    padding-bottom: 1px;
+}
+ul{
+    padding-left: 20px;
+}
+section{
+    padding: 10px 10px;
+    margin-bottom: 15px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgb(150, 64, 2);
+}
+nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.5s ease-in-out;
+}
+nav a:hover{
+    color: rgb(246, 166, 63);
+}
+button{
+    height: 50px;
+    width: 200px;
+    border: none;
+    font-size: medium;
+    color:rgb(249, 222, 187);
+    background-color: rgb(150, 64, 2);
+    border-radius: 30px;
+}
+button:active{
+    background-color: rgb(169, 109, 67);
+}
+button:hover{
+    background-color: rgb(169, 109, 67);
+    transition: background-color 0.3s ease;
+}
+label{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+input, textarea{
+       height: 50px;
+       width: 300px;
+       margin-top: 5px;
+       border: 2px solid rgb(150, 64, 2);
+       border-radius: 8px;
+       font-size: 16px;
+       font-family: inherit;
+       color: rgb(60, 30, 10);
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-color: rgb(246, 166, 63);
+    box-shadow: 0 0 5px rgba(150, 64, 2, 0.4);
+}
+textarea{
+    height: 50px;
+    resize: vertical;
+}
+html{
+    scroll-behavior: smooth;
+}
+#navToggle{
+    display: none;
+}
+@media(max-width: 768px){
+    #navToggle{
+        display:block;
+    }
+nav {
+    flex-direction: column;
+}
+nav a{
+    display: none;
+}
+nav a.show{
+    display: block;
+}
+}
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
