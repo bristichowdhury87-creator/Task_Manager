@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | CodSoft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task Manager</h1>
+<button id="theme-toggle">Change mode</button>
+<form id="task-form">
+<input type="text" placeholder = "Enter the task to be done">
+<select name="Tasks" id="task-category" required>
+    <option value="" disabled selected>Task Category</option>
+    <option value="work">Work</option>
+    <option value="study">Study</option>
+    <option value="personal">Personal</option>
+</select>
+<select name="Priority" id ="task-priority">
+    <option value="" disabled selected>Select Category</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+</select>
+<input type="date" name="task-due-date" required>
+<button type="submit">Submit</button>
+</form>
+<section id="dashboard">
+    <h2>Dashboard</h2>
+        <div class="stat-card">Total: <span id="total-count">0</span></div>
+        <div class="stat-card">Completed: <span id="completed-count">0</span></div>
+        <div class="stat-card">Pending: <span id="pending-count">0</span></div>
+</section>
+<section id="controls">
+    <input type="search" id ="search-inputs" placeholder="Search tasks">
+    <div class="filter-buttons">
+     <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+</section>
+<section id="task-list-section">
+<ul id="task-list"></ul>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
